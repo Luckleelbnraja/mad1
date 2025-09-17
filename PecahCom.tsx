@@ -1,30 +1,33 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
-import TextInput from './components/TextInput';
+import { View, StyleSheet } from 'react-native';
+import Title from './components/Title';
+import Input from './components/TextInput';
 import Button from './components/Button';
 
-const Login: React.FC = () => {
+const PecahCom: React.FC = () => {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Welcome</Text>
-      <TextInput placeholder="Masukan username anda" label="Username" />
-      <TextInput
+      <Title text="Welcome" />
+
+      <Input placeholder="Masukan username anda" label="Username" />
+      <Input
         placeholder="Masukan password anda"
         label="Password"
         secureTextEntry={true}
       />
-      <Button label="Sign In" onPress={() => console.log('Sign In pressed')} />
-      <Button
-        label="Create New Account"
-        color="#797171"
-        colorText="#ffffff"
-        onPress={() => console.log('Create Account pressed')}
-      />
+
+      {/* Tombol Sign In */}
+      <Button label="Sign In" color="orange" colorText="white" onPress={() => {}} />
+
+      {/* Tambahan tombol */}
+      <Button label="Sign in Google" color="#DB4437" colorText="white" onPress={() => {}} />
+      <Button label="Sign in Facebook" color="#1877F2" colorText="white" onPress={() => {}} />
+      <Button label="Sign in Apple" color="#000000" colorText="white" onPress={() => {}} />
     </View>
   );
 };
 
-export default Login;
+export default PecahCom;
 
 const styles = StyleSheet.create({
   container: {
@@ -32,11 +35,5 @@ const styles = StyleSheet.create({
     paddingHorizontal: 30,
     backgroundColor: '#fff',
     flex: 1,
-  },
-  title: {
-    fontSize: 28,
-    fontWeight: 'bold',
-    color: 'black',
-    marginBottom: 40,
   },
 });
