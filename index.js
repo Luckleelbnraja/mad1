@@ -5,10 +5,12 @@
 import { AppRegistry } from 'react-native';
 // import App from './App';
 // import biodata from './biodata';
-import Login from './Login';
+// import Login from './Login';
+import Registration from './Registration';
 import { name as appName } from './app.json';
 
 
 // AppRegistry.registerComponent(appName, () => App);
 // AppRegistry.registerComponent(appName, () => biodata);
-AppRegistry.registerComponent(appName, () => Login);
+// AppRegistry.registerComponent(appName, () => Login);
+AppRegistry.registerComponent(appName, () => Registration);
